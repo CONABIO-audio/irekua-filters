@@ -38,7 +38,7 @@ class Filter(FilterSet):
 search_fields = (
     'internal_id',
     'site__name',
-    'site__locality',
+    'site__locality__name',
     'site_type__name',
 )
 

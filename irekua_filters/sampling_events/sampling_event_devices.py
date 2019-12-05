@@ -33,7 +33,8 @@ class Filter(FilterSet):
         return queryset
 
 search_fields = (
-    'collection_device__physical_device__device__serial_number',
+    'collection_device__internal_id',
+    'collection_device__physical_device__serial_number',
     'collection_device__physical_device__device__brand__name',
     'collection_device__physical_device__device__model'
 )

@@ -24,18 +24,19 @@ class Filter(FilterSet):
             'created_on': ['gt', 'lt'],
         }
 
-        filter_overrides = {
-            models.DateTimeField: {
-                'filter_class': DateFilter,
-                'extra': lambda f: {
-                    'widget': forms.DateInput(attrs={'class': 'datepicker'})
-                }
-            },
-        }
+        # filter_overrides = {
+        #     models.DateTimeField: {
+        #         'filter_class': DateFilter,
+        #         'extra': lambda f: {
+        #             'widget': forms.DateInput(attrs={'class': 'datepicker'})
+        #         }
+        #     },
+        # }
 
 
 search_fields = (
     'name',
+    'description',
     'collection_type__name',
     'institution__institution_name',
     'institution__institution_code'
@@ -44,5 +45,5 @@ search_fields = (
 
 ordering_fields = (
     ('created_on', _('created on')),
-    ('name', _('name'))
+    ('name', _('name')),
 )
