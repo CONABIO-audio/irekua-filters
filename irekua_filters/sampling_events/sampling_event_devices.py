@@ -34,6 +34,7 @@ class Filter(FilterSet):
 
 search_fields = (
     'collection_device__internal_id',
+    'collection_device__physical_device__identifier',
     'collection_device__physical_device__serial_number',
     'collection_device__physical_device__device__brand__name',
     'collection_device__physical_device__device__model'

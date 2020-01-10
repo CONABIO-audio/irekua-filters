@@ -51,6 +51,9 @@ search_fields = (
     'created_by__username',
     'created_by__first_name',
     'created_by__last_name',
+    'sampling_event_device__collection_device__internal_id',
+    'sampling_event_device__sampling_event__collection_site__internal_id',
+    'annotation__labels__value'
 )
 
 

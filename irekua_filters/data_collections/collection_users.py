@@ -27,6 +27,8 @@ search_fields = (
     'user__last_name',
     'user__username',
     'user__email',
+    'user__institution__institution_name',
+    'user__institution__institution_code'
 )
 
 ordering_fields = (

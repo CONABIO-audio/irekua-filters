@@ -44,6 +44,7 @@ class Filter(FilterSet):
 search_fields = (
     'sampling_event_type__name',
     'collection_site__internal_id',
+    'collection_site__site__locality__name',
 )
 
 

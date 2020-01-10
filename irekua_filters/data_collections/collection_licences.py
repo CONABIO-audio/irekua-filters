@@ -38,10 +38,10 @@ class Filter(FilterSet):
         return queryset
 
 search_fields = (
-    'internal_id',
-    'created_on',
-    'created_by',
-    'licence_type'
+    'created_by__username',
+    'created_by__first_name',
+    'created_by__last_name',
+    'licence_type__name'
 )
 
 

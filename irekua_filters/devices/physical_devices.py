@@ -32,6 +32,8 @@ class Filter(FilterSet):
 search_fields = (
     'device__brand__name',
     'device__model',
+    'serial_number',
+    'device__device_type__name',
     'identifier',
 )
 
