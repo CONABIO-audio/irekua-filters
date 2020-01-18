@@ -19,6 +19,7 @@ class Filter(FilterSet):
             'created_by__first_name': ['icontains'],
             'created_by__last_name': ['icontains'],
             'site_type': ['exact'],
+            'site': ['exact'],
             'site__altitude': ['gt', 'lt'],
             'site__latitude': ['gt', 'lt'],
             'site__longitude': ['gt', 'lt'],

@@ -16,6 +16,8 @@ class Filter(FilterSet):
             'institution__country': ['icontains'],
             'is_open': ['exact'],
             'created_on': ['gt', 'lt'],
+            'collectiondevice__physical_device': ['exact'],
+            'collectionsite__site': ['exact'],
         }
 
 

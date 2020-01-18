@@ -24,9 +24,11 @@ class Filter(FilterSet):
             'created_by__institution__institution_code': ['exact'],
             'created_by__institution__country': ['icontains'],
             'sampling_event_device': ['exact'],
+            'sampling_event_device__collection_device__physical_device': ['exact'],
             'sampling_event_device__sampling_event__collection_site': ['exact'],
             'sampling_event_device__collection_device': ['exact'],
             'sampling_event_device__sampling_event': ['exact'],
+            'sampling_event_device__sampling_event__collection_site__site': ['exact'],
             'item_type': ['exact'],
             'created_on': ['gt', 'lt'],
         }

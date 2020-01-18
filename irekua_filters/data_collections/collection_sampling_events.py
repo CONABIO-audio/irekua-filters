@@ -13,6 +13,7 @@ class Filter(FilterSet):
         method='user_owns_object',
         label=_('Mine'),
         widget=forms.CheckboxInput())
+
     class Meta:
         model = SamplingEvent
         fields = {
@@ -21,10 +22,12 @@ class Filter(FilterSet):
             'created_by__first_name': ['icontains'],
             'created_by__last_name': ['icontains'],
             'sampling_event_type': ['exact'],
+            'collection_site__site': ['exact'],
             'collection_site__site__name': ['icontains'],
             'started_on': ['gt', 'lt'],
             'ended_on': ['gt', 'lt'],
             'created_on': ['gt', 'lt'],
+            'collection_site': ['exact'],
         }
 
         filter_overrides = {

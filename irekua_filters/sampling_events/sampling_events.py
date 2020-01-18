@@ -28,13 +28,14 @@ class Filter(FilterSet):
             'ended_on': ['lt', 'gt'],
             'started_on': ['lt', 'gt'],
             'collection_site': ['exact'],
-            'collection_site__site__name': ['icontains'],
+            'collection_site__site': ['exact'],
+            'collection_site__internal_id': ['icontains'],
             'created_by': ['exact'],
             'created_by__username': ['icontains'],
             'created_by__first_name': ['icontains'],
             'created_by__last_name': ['icontains'],
+            'samplingeventdevice__collection_device__physical_device': ['exact'],
         }
-
 
         filter_overrides = {
             models.DateTimeField: {

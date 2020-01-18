@@ -21,6 +21,7 @@ class Filter(FilterSet):
             'created_by__username': ['icontains'],
             'created_by__first_name': ['icontains'],
             'created_by__last_name': ['icontains'],
+            'physical_device': ['exact'],
             'physical_device__device__brand__name': ['icontains'],
             'physical_device__device__model': ['icontains'],
             'physical_device__device__device_type': ['exact'],
