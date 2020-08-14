@@ -15,6 +15,7 @@ class Filter(FilterSet):
     class Meta:
         model = Annotation
         fields = {
+            'item': ['exact'],
             'annotation_type': ['exact'],
             'event_type': ['exact'],
             'created_by__username': ['icontains'],
