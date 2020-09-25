@@ -21,7 +21,6 @@ class Filter(FilterSet):
             'created_by__username': ['icontains'],
             'created_by__first_name': ['icontains'],
             'created_by__last_name': ['icontains'],
-            'certainty' : ['gt', 'lt'],
             'created_on': ['gt', 'lt'],
             }
 
